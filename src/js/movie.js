@@ -248,12 +248,7 @@ $(document).ready(function() {
 		//选集确认
 		else if (keyCode == 13) {
 
-			if (window["androidNative"] && typeof(window["androidNative"].tvUrl) === "function") {
-				var tvVideo = "http://meiriq-static.b0.upaiyun.com/static/TV/movie/"+globalData.movieUrl+"/" + globalData.seclectNum + ".mp4";
-				window["androidNative"].tvClick(tvVideo);
-			}
-
-			//location.href = ['./movie.html?id='+globalData.url.id+'&len='+ globalData.url.len+'&num='+globalData.seclectNum];
+			location.href = ['./movie.html?id='+globalData.url.id+'&len='+ globalData.url.len+'&num='+globalData.seclectNum];
 
 			keyState();
 		}
@@ -469,12 +464,7 @@ $(document).ready(function() {
 				//当焦点在视频时
 				else if (globalData.itemNum == 4) {
 
-					if (window["androidNative"] && typeof (window["androidNative"].tvUrl) === "function") {
-						var tvVideo = "http://meiriq-static.b0.upaiyun.com/static/TV/movie/" + globalData.movieUrl + "/1.mp4";
-						window["androidNative"].tvClick(tvVideo);
-					}
-
-					//location.href = ['./movie_full.html?id='+globalData.url.id+'&len='+ globalData.url.len+'&num='+globalData.url.num];
+					location.href = ['./movie_full.html?id='+globalData.url.id+'&len='+ globalData.url.len+'&num='+globalData.url.num];
 					keyState();
 				}
 				//当焦点在选集列表时

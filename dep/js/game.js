@@ -1,4 +1,4 @@
-/*! This is 每日TV  - 2016-06-22 */$(document).ready(function() {
+/*! This is 每日TV  - 2016-07-06 */$(document).ready(function() {
     var a = "#1abc9c", b = "rgba(255, 255, 255, 0.3)", c = !0;
     window.globalData = {}, globalData.collectState = !0, globalData.gameState = !0, 
     globalData.collect = localStorage.getItem("data_collect") ? JSON.parse(localStorage.getItem("data_collect")) : [], 
@@ -61,7 +61,7 @@
                 borderWidth: "0.25em",
                 borderStyle: "solid",
                 borderColor: b
-            }), $("#main .full-play").hide(), window.androidNative && "function" == typeof window.androidNative.tvUrl && window.androidNative.openGame(globalData.game[globalData.url.id - 1].game_url));
+            }), $("#main .full-play").hide(), location.href = [ globalData.game[globalData.url.id - 1].game_url ]);
             d();
         } else f && 8 == f.keyCode && c && (location.href = "index.html", d());
     };

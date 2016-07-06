@@ -1,4 +1,4 @@
-/*! This is 每日TV  - 2016-06-22 */function startTime() {
+/*! This is 每日TV  - 2016-07-06 */function startTime() {
     var a = new Date(), b = a.getHours(), c = checkTime(a.getMinutes());
     $("#header .top-time span").text(b + ":" + c), setTimeout(startTime, 1e3);
 }

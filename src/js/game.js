@@ -214,11 +214,7 @@ $(document).ready(function() {
 					});
 				$("#main .full-play").hide();
 
-				if (window["androidNative"] && typeof(window["androidNative"].tvUrl) === "function") {
-					window["androidNative"].openGame(globalData.game[globalData.url.id - 1].game_url);
-				}
-
-				//location.href = [globalData.game[globalData.url.id - 1].game_url];
+				location.href = [globalData.game[globalData.url.id - 1].game_url];
 			}
 
 			keyState();

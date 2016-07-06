@@ -1,4 +1,4 @@
-/*! This is 每日TV  - 2016-06-22 */data_movies = [ {
+/*! This is 每日TV  - 2016-07-06 */data_movies = [ {
     id: 1,
     title: "白想那么多",
     icon: "./dep/img/movies/1.png",

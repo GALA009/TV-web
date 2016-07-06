@@ -1,4 +1,4 @@
-/*! This is 每日TV  - 2016-06-22 */$(document).ready(function() {
+/*! This is 每日TV  - 2016-07-06 */$(document).ready(function() {
     var a = "#1abc9c", b = "rgba(255, 255, 255, 0.3)", c = !0, d = "0", e = "1", f = "fast", g = [ "-9.22%", "0", "9.22%", "18.44%", "27.66%", "36.88%", "46.1%", "55.32%", "64.54%", "73.76%", "82.98%", "92.2%" ];
     window.globalData = {}, globalData.collectState = !0, globalData.collect = localStorage.getItem("data_collect") ? JSON.parse(localStorage.getItem("data_collect")) : [], 
     globalData.hot = JSON.parse(localStorage.getItem("data_movies"));
@@ -94,13 +94,8 @@
                 opacity: d,
                 top: g[11]
             }), h();
-        } else if (13 == a) {
-            if (window.androidNative && "function" == typeof window.androidNative.tvUrl) {
-                var c = "http://meiriq-static.b0.upaiyun.com/static/TV/movie/" + globalData.movieUrl + "/" + globalData.seclectNum + ".mp4";
-                window.androidNative.tvClick(c);
-            }
-            h();
-        }
+        } else 13 == a && (location.href = [ "./movie.html?id=" + globalData.url.id + "&len=" + globalData.url.len + "&num=" + globalData.seclectNum ], 
+        h());
     }, l = function(d) {
         if (38 == d && c) c = !1, 1 == globalData.itemNum ? h() : 2 == globalData.itemNum || 3 == globalData.itemNum ? ($("#main [data-item=" + (globalData.itemNum - 1) + "]").addClass("active").css({
             backgroundColor: a
@@ -148,13 +143,8 @@
             globalData.collect.unshift(globalData.hot[globalData.url.id - 1]), localStorage.setItem("collectArray", e), 
             localStorage.setItem("data_collect", JSON.stringify(globalData.collect)), $("#main [data-item=" + globalData.itemNum + "] span").text("取消追剧"), 
             globalData.collectState = !0), h();
-        } else if (4 == globalData.itemNum) {
-            if (window.androidNative && "function" == typeof window.androidNative.tvUrl) {
-                var g = "http://meiriq-static.b0.upaiyun.com/static/TV/movie/" + globalData.movieUrl + "/1.mp4";
-                window.androidNative.tvClick(g);
-            }
-            h();
-        } else isNaN(globalData.itemNum) && k(d); else 8 == d && c && (c = !1, isNaN(globalData.itemNum) ? ($("#main [data-item=1]").addClass("active").css({
+        } else 4 == globalData.itemNum ? (location.href = [ "./movie_full.html?id=" + globalData.url.id + "&len=" + globalData.url.len + "&num=" + globalData.url.num ], 
+        h()) : isNaN(globalData.itemNum) && k(d); else 8 == d && c && (c = !1, isNaN(globalData.itemNum) ? ($("#main [data-item=1]").addClass("active").css({
             backgroundColor: a
         }), $("#main [data-item=5] .active").css({
             backgroundColor: b
