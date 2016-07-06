@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+		<title>每日TV首页推荐</title>
+		<link rel="stylesheet" href="./dep/css/bootstrap.min.css">
+		<link rel="stylesheet" href="./dep/css/style.min.css">
+
+		<!--[if lt IE 9]>
+			<script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+	<script>
+		autoWidth = window.innerWidth;
+		autoHeight = window.innerHeight;
+
+		document.getElementsByTagName("body")[0].style.width=autoWidth+'px';
+		document.getElementsByTagName('body')[0].style.height=autoHeight+'px';
+	</script>
+		<div class="movie-full">
+			<video id="videoBlur" data-item='4' preload="auto" controls autoplay>
+				<source type='video/mp4'>
+			</video>
+			<div class="loading-img"></div>
+		</div>
+
+		<script src="./dep/js/jquery-1.12.2.min.js"></script>
+		<script src="./dep/js/bootstrap.min.js"></script>
+		<script src="./dep/js/movie_full.js"></script>
+	</body>
+</html>

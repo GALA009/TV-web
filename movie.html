@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+		<title>每日TV首页推荐</title>
+		<link rel="stylesheet" href="./dep/css/bootstrap.min.css">
+		<link rel="stylesheet" href="./dep/css/style.min.css">
+
+		<!--[if lt IE 9]>
+			<script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+	<script>
+		autoWidth = window.innerWidth;
+		autoHeight = window.innerHeight;
+
+		if (autoWidth < 1920) {
+			document.getElementsByTagName("body")[0].style.fontSize="12px";
+		} else if (autoWidth >= 1920 && autoWidth < 2560) {
+			document.getElementsByTagName("body")[0].style.fontSize="16px";
+		} else if (autoWidth >= 2560 && autoWidth < 3840) {
+			document.getElementsByTagName("body")[0].style.fontSize="22px";
+		} else {
+			document.getElementsByTagName("body")[0].style.fontSize="32px";
+		}
+
+		document.getElementsByTagName("body")[0].style.width=autoWidth+'px';
+		document.getElementsByTagName('body')[0].style.height=autoHeight+'px';
+	</script>
+
+		<!--顶部开始-->
+		<div class="top" id="header" data-item="0">
+			<div class="pull-left top-title">第1集</div>
+			<div class="pull-right top-time"><span></span></div>
+			<div class="clearfix"></div>
+		</div>
+		<!--顶部结束-->
+
+		<!--视频内容开始-->
+		<div class="content" id="main">
+			<div class="pull-left main-left-nav">
+				<div class="nav-btn nav-btn-num" data-item='1'><span>选集</span></div>
+				<div class="nav-btn nav-btn-seek" data-item='2'><span>追剧</span></div>
+			</div>
+			<div class="pull-left main-content mod-detail">
+				<div class="bg-img"  data-item='4'>
+					<div class="full-play"></div>
+					<p>点击播放视频</p>
+				</div>
+				<div class="movie-num" data-item='5'>
+					<ul class="list-unstyled">
+					</ul>
+					<span class="movie-next glyphicon glyphicon-menu-down" data-num='next'></span>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<!--视频内容开始-->
+
+		<script src="./dep/js/jquery-1.12.2.min.js"></script>
+		<script src="./dep/js/bootstrap.min.js"></script>
+		<script src="./dep/js/common.js"></script>
+		<script src="./dep/js/movie.js"></script>
+	</body>
+</html>
