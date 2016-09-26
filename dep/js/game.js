@@ -1,4 +1,4 @@
-/*! This is 每日TV  - 2016-07-06 */$(document).ready(function() {
+/*! This is TV盒子  - 2016-07-24 */$(document).ready(function() {
     var a = "#1abc9c", b = "rgba(255, 255, 255, 0.3)", c = !0;
     window.globalData = {}, globalData.collectState = !0, globalData.gameState = !0, 
     globalData.collect = localStorage.getItem("data_collect") ? JSON.parse(localStorage.getItem("data_collect")) : [], 

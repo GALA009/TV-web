@@ -16,8 +16,6 @@ module.exports = function(grunt) {
 				}
 			}
 		},
-		
-		
 		//压缩CSS文件
 		cssmin: {
 			target: {
@@ -30,27 +28,27 @@ module.exports = function(grunt) {
 				}]
 			}
 		},
-		//合并文件
-		concat: {
-			options: {
-				separator: '',
-			},
-			dist: {
-				src: ['./src/js/index.js', './src/js/movie.js'],//需要合并的文件
-				dest: './src/js/global.js'	//合并后文件地址
-			},
-		},
+		// //合并文件
+		// concat: {
+		// 	options: {
+		// 		separator: '',
+		// 	},
+		// 	dist: {
+		// 		src: ['./src/js/app_set.js', './src/js/common.js', './src/js/database.js', './src/js/game.js', './src/js/index.js', './src/js/movie.js', './src/js/movie_full.js'],//需要合并的文件
+		// 		dest: './src/js/global.js'	//合并后文件地址
+		// 	},
+		// },
 
 
 		//检查JS是否语法正确
 		jshint: {
-			all: ['./src/js/index.js', './src/js/movie.js', './src/js/common.js', './src/js/database.js', './src/js/game.js', './src/js/app_set.js', './src/js/movie_full.js']
+			all: ['./src/js/global.js']
 		},
 
 		// uglify插件的配置信息, 用于压缩js
 		uglify: {
 				options: {
-					banner: '/*! This is 每日TV  - ' +
+					banner: '/*! This is TV盒子  - ' +
 						'<%= grunt.template.today("yyyy-mm-dd") %> */',
 					beautify: true,//是否压缩
 					mangle: true, //混淆变量名
@@ -60,13 +58,13 @@ module.exports = function(grunt) {
 				app_task: {
 					files: {
 						//'./dep/js/global.min.js': ['./src/js/global.js'],
-						'./dep/js/index.js': ['./src/js/index.js'],
-						'./dep/js/movie.js': ['./src/js/movie.js'],
+						'./dep/js/app_set.js': ['./src/js/app_set.js'],
 						'./dep/js/common.js': ['./src/js/common.js'],
 						'./dep/js/database.js': ['./src/js/database.js'],
 						'./dep/js/game.js': ['./src/js/game.js'],
-						'./dep/js/app_set.js': ['./src/js/app_set.js'],
-						'./dep/js/movie_full.js': ['./src/js/movie_full.js'],
+						'./dep/js/index.js': ['./src/js/index.js'],
+						'./dep/js/movie.js': ['./src/js/movie.js'],
+						'./dep/js/movie_full.js': ['./src/js/movie_full.js']
 					}
 				}
 		},

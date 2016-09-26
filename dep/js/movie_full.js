@@ -1,4 +1,4 @@
-/*! This is 每日TV  - 2016-07-06 */$("#videoBlur").width($(window).width()), $("#videoBlur").height($(window).height()), 
+/*! This is TV盒子  - 2016-07-24 */$("#videoBlur").width($(window).width()), $("#videoBlur").height($(window).height()), 
 $(document).ready(function() {
     var a = !0;
     window.globalData = {};

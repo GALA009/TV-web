@@ -1,4 +1,4 @@
-/*! This is 每日TV  - 2016-07-06 */function getJson(a) {
+/*! This is TV盒子  - 2016-07-24 */function getJson(a) {
     globalData.getJson = a, localStorage.setItem("getJson", globalData.getJson), globalData.getJsonTest = JSON.parse(localStorage.getItem("getJson"));
 }
 
