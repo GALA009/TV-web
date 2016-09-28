@@ -89,7 +89,7 @@ $(document).ready(function() {
 	init();
 	document.onkeydown = function(event) {
 		var e = event || window.event || arguments.callee.caller.arguments[0];
-
+		console.log(e.keyCode)
 		//左键
 		if (e && e.keyCode == 37 && keyDownState) {
 			player.currentTime -= 5;
