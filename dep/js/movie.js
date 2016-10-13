@@ -1,4 +1,4 @@
-/*! This is TV盒子  - 2016-07-24 */$(document).ready(function() {
+/*! This is TV盒子  - 2016-10-13 */$(document).ready(function() {
     var a = "#1abc9c", b = "rgba(255, 255, 255, 0.3)", c = !0, d = "0", e = "1", f = "fast", g = [ "-9.22%", "0", "9.22%", "18.44%", "27.66%", "36.88%", "46.1%", "55.32%", "64.54%", "73.76%", "82.98%", "92.2%" ];
     window.globalData = {}, globalData.collectState = !0, globalData.collect = localStorage.getItem("data_collect") ? JSON.parse(localStorage.getItem("data_collect")) : [], 
     globalData.hot = JSON.parse(localStorage.getItem("data_movies"));

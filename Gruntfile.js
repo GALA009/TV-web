@@ -5,17 +5,17 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 
-		//编译sass文件
-		sass: {
-			dist : {
-				options: {
-					style: 'expanded'
-				},
-				files: {
-					'./src/css/style.css' : './src/css/style.scss'
-				}
-			}
-		},
+		// //编译sass文件
+		// sass: {
+		// 	dist : {
+		// 		options: {
+		// 			style: 'expanded'
+		// 		},
+		// 		files: {
+		// 			'./src/css/style.css' : './src/css/style.scss'
+		// 		}
+		// 	}
+		// },
 		//压缩CSS文件
 		cssmin: {
 			target: {
@@ -28,16 +28,16 @@ module.exports = function(grunt) {
 				}]
 			}
 		},
-		// //合并文件
-		// concat: {
-		// 	options: {
-		// 		separator: '',
-		// 	},
-		// 	dist: {
-		// 		src: ['./src/js/app_set.js', './src/js/common.js', './src/js/database.js', './src/js/game.js', './src/js/index.js', './src/js/movie.js', './src/js/movie_full.js'],//需要合并的文件
-		// 		dest: './src/js/global.js'	//合并后文件地址
-		// 	},
-		// },
+		//合并文件
+		concat: {
+			options: {
+				separator: '',
+			},
+			dist: {
+				src: ['./src/js/app_set.js', './src/js/common.js', './src/js/database.js', './src/js/game.js', './src/js/index.js', './src/js/movie.js', './src/js/movie_full.js'],//需要合并的文件
+				dest: './src/js/global.js'	//合并后文件地址
+			},
+		},
 
 
 		//检查JS是否语法正确
@@ -78,11 +78,11 @@ module.exports = function(grunt) {
 				options: {livereload:true},
 				tasks: ['jshint', 'uglify']
 			},
-			sass: {
-				files: ['./src/css/style.scss'],
-				tasks: ['sass'],
-				options: {livereload:true}
-			},
+			// sass: {
+			// 	files: ['./src/css/style.scss'],
+			// 	tasks: ['sass'],
+			// 	options: {livereload:true}
+			// },
 			html: {
 				files: ['./*.html'],
 				options: {livereload:true}
@@ -126,9 +126,9 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
 	// 告诉grunt当我们在终端中输入grunt时需要做些什么
-	grunt.registerTask('outputcss', ['sass', 'cssmin']); //编译sass 压缩css
+	//grunt.registerTask('outputcss', ['sass', 'cssmin']); //编译sass 压缩css
 	grunt.registerTask('concatjs', ['concat']); //合并JS文件
 	grunt.registerTask('compressjs', ['concat','jshint','uglify']);//合并JS 检查 压缩
-	grunt.registerTask('watchit', ['sass', 'cssmin', 'concat','jshint','uglify','connect','watch']);
-	grunt.registerTask('default', ['sass','cssmin','uglify','connect','watch']);
+	grunt.registerTask('watchit', ['cssmin', 'concat','jshint','uglify','connect','watch']);
+	grunt.registerTask('default', ['cssmin','uglify','connect','watch']);
 };

@@ -1,4 +1,4 @@
-/*! This is TV盒子  - 2016-07-24 */var downloadDataList = function() {
+/*! This is TV盒子  - 2016-10-13 */var downloadDataList = function() {
     var a = {}, b = [], c = 0;
     if (globalData.getJson = JSON.parse(localStorage.getItem("getJson")), globalData.game = JSON.parse(localStorage.getItem("data_games")), 
     null !== globalData.getJson) {

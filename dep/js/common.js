@@ -1,4 +1,4 @@
-/*! This is TV盒子  - 2016-07-24 */function startTime() {
+/*! This is TV盒子  - 2016-10-13 */function startTime() {
     var a = new Date(), b = a.getHours(), c = checkTime(a.getMinutes());
     $("#header .top-time span").text(b + ":" + c), setTimeout(startTime, 1e3);
 }

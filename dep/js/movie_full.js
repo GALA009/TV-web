@@ -1,4 +1,4 @@
-/*! This is TV盒子  - 2016-07-24 */$("#videoBlur").width($(window).width()), $("#videoBlur").height($(window).height()), 
+/*! This is TV盒子  - 2016-10-13 */$("#videoBlur").width($(window).width()), $("#videoBlur").height($(window).height()), 
 $(document).ready(function() {
     var a = !0;
     window.globalData = {};
@@ -29,7 +29,7 @@ $(document).ready(function() {
         }, 200);
     }, 1e3), e(), document.onkeydown = function(d) {
         var e = d || window.event || arguments.callee.caller.arguments[0];
-        e && 37 == e.keyCode && a ? b.currentTime -= 5 : e && 39 == e.keyCode && a ? (b.currentTime += 5, 
+        console.log(e.keyCode), e && 37 == e.keyCode && a ? b.currentTime -= 5 : e && 39 == e.keyCode && a ? (b.currentTime += 5, 
         c()) : e && 13 == e.keyCode && a ? (b.paused ? b.play() : b.pause(), c()) : e && 8 == e.keyCode && a && (localStorage.setItem("playTime", b.currentTime - 2), 
         location.href = [ "../view/movie_full.html?id=" + globalData.url.id + "&len=" + globalData.url.len + "&num=" + globalData.url.num ], 
         c());
